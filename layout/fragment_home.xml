@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_fresh"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/weather_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="5sp"
+                android:background="@drawable/background_home_card">
+
+                <ImageView
+                    android:id="@+id/weather_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_home_card"
+                    android:scaleType="centerCrop" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow android:textAlignment="center">
+
+                        <TextView
+                            android:id="@+id/city_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35sp"
+                            android:layout_marginTop="12sp"
+                            android:textColor="#ffffff"
+                            android:textSize="27sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/temp_text"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="110sp"
+                            android:layout_marginTop="12sp"
+                            android:textColor="#ffffff"
+                            android:textSize="27sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+
+                    <TableRow android:textAlignment="center">
+
+                        <TextView
+                            android:id="@+id/state_text"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35sp"
+                            android:textColor="#ffffff"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/condition_text"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="125sp"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+
+
+            <!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:id="@+id/swipe_fresh"-->
+            <!--            android:layout_below="@+id/weather_card_layout">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weather_card_layout"
+                android:layout_marginTop="5sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="53dp"
+                    android:layout_height="52dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginTop="250sp" />
+
+                <TextView
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="0dp"
+                    android:background="#00000000"
+                    android:text="Fetching News" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
