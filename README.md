@@ -9,7 +9,7 @@ Include location
 
 ##### Homeview:
 
-![home](https://github.com/xiaohai0313/News-app-android/blob/master/screenshot/bookmark.png)
+![home](https://github.com/xiaohai0313/News-app-android/blob/master/screenshot/home.png)
 
 ##### Detailview:
 
