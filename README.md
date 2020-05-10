@@ -3,7 +3,7 @@
 Build on Android Studio IDE.
 Similar as web version, Andriod app will retrieve data from backend
 
-##### Use location, toolbar, and navigation module
+##### Use location, toolbar, progressBar, navigation module 
 
 ## Demo Screenshot:
 
