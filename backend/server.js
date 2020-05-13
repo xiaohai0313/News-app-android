@@ -7,11 +7,11 @@ const https = require("https");
 const url = require('url');
 //const cors = require("cors");       //�ǵ�ɾcors
 //app.use(cors());
-const Guradian_home_url = "https://content.guardianapis.com/search?api-key=e628090b-804b-44f6-8a69-f33efc0bdf06&section=(sport|business|technology|politics)&show-blocks=all";
+const Guradian_home_url = "https://content.guardianapis.com/search?api-key=keys&section=(sport|business|technology|politics)&show-blocks=all";
 const Guradian_tab_url1 = "https://content.guardianapis.com/";
-const Guradian_tab_url2 = "?api-key=966536f3-4a7b-4214-b08b-ad9bdf0f2f3e&show-blocks=all";
+const Guradian_tab_url2 = "?api-key=keys&show-blocks=all";
 
-const autosuggest_url = "https://api.cognitive.microsoft.com/bing/v7.0/suggestions?q=9c85981dd8db40a8b68540a9f9141e1a";
+const autosuggest_url = "https://api.cognitive.microsoft.com/bing/v7.0/suggestions?q=keys";
 
 const port = process.env.PORT || 7000;
 //for test
@@ -24,7 +24,7 @@ app.get("/api/Search", function (req, res) {
     var cur_url = "";
     var params = url.parse(req.url, true).query;
     
-    cur_url = 'https://content.guardianapis.com/search?q=' + params.keyword + '&api-key=966536f3-4a7b-4214-b08b-ad9bdf0f2f3e&show-blocks=all'
+    cur_url = 'https://content.guardianapis.com/search?q=' + params.keyword + '&api-key=keys&show-blocks=all'
     
     
     //console.log("Search")
@@ -45,7 +45,7 @@ app.get("/api/Search", function (req, res) {
 app.get("/api/Detail", function (req, res) {
     var cur_url = "";
     var params = url.parse(req.url, true).query;
-    cur_url = "https://content.guardianapis.com/" + params.link + "?api-key=966536f3-4a7b-4214-b08b-ad9bdf0f2f3e&show-blocks=all";
+    cur_url = "https://content.guardianapis.com/" + params.link + "?api-key=keys&show-blocks=all";
     
     https.get(cur_url, function (response) {
         var res_text = "";
