@@ -118,7 +118,7 @@ public class HomeFragment extends Fragment implements LocationListener, MyAdapte
             url = "https://theh9backend.wm.r.appspot.com/api/latest";
         } else {
             url = "https://api.openweathermap.org/data/2.5/weather?q=" + split[1] +
-                    "&units=metric&appid=3ef6e020d731394b7afeaa6b3a2e0c92";
+                    "&units=metric&appid=keys";
         }
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
